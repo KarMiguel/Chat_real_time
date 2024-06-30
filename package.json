@@ -1,0 +1,27 @@
+{
+  "name": "index.js",
+  "version": "1.0.0",
+  "description": "chat real time",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarMiguel/Chat_real_time.git"
+  },
+  "author": "Carlos Miguel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KarMiguel/Chat_real_time/issues"
+  },
+  "homepage": "https://github.com/KarMiguel/Chat_real_time#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "consign": "^0.1.6",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "nodemon": "^3.1.4"
+  }
+}
