@@ -11,7 +11,7 @@ app.set('views', './app/views');
 
 // Middlewares
 app.use(express.static('./app/public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Carregar rotas, modelos e controladores
 consign()
