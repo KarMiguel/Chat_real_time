@@ -27,7 +27,7 @@ Certifique-se de ter o Node.js instalado no seu sistema. Em seguida, execute:
 
 3. **Execute o servidor:**
 
-Para iniciar o servidor, utilize o Nodemon (se já estiver instalado globalmente) para monitorar mudanças no código:
+Para iniciar o servidor, utilize o Nodemon (se já estiver instalado globalmente) para monitorar mudanças no código: **nodemon app**
 
 - **`app.js`**: Arquivo principal que configura o servidor Express e WebSocket.
 - **`package.json`**: Arquivo de configuração do npm com as dependências e scripts do projeto.
