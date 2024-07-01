@@ -7,7 +7,7 @@ Este é um exemplo simples de uma aplicação de chat online utilizando Node.js 
 Para executar este projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório:**
-
+ 
 ```bash
 https://github.com/KarMiguel/Chat_real_time.git
 ```
