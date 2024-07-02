@@ -2,7 +2,7 @@ const app = require('./config/server');
 const http = require('http');
 const server = http.createServer(app); // Create an HTTP server instance
 
-server.listen(80, () => {
+server.listen(3000, () => {
     console.log('Servidor online');
 });
 
