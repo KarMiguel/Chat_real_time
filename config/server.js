@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Carregar rotas, modelos e controladores
 consign()
-  .include('./app/routes')
-  .then('./app/models')
-  .then('./app/controllers')
+  .include('app/routes')
+  .then('app/models')
+  .then('app/controllers')
   .into(app);
 
 // Exportar aplicativo
