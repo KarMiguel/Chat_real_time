@@ -1,4 +1,4 @@
-module.exports.iniciaChat = (app, req, res) => {
-        res.render('chat', { title: 'Chat Real-Time' });
-      };
-      
+module.exports.home = (application, req, res) => {
+        res.render('index',{validacao:{}});
+   
+};
