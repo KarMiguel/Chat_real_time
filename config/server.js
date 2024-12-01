@@ -1,24 +1,24 @@
 const express = require('express');
+const consign = require('consign');
 const bodyParser = require('body-parser');
-const path = require('path');
-
-// Importação manual das rotas
-const indexRoutes = require('../app/routes/index');
-const chatRoutes = require('../app/routes/chat');
+const { body, validationResult } = require('express-validator');
 
 const app = express();
 
 // Configurações
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../app/views'));
+app.set('views', './app/views');
 
 // Middlewares
-app.use(express.static(path.join(__dirname, '../app/public')));
+app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Registrar rotas manualmente
-indexRoutes(app);
-chatRoutes(app);
+// Carregar rotas, modelos e controladores
+consign()
+  .include('./app/routes')
+  .then('./app/models')
+  .then('./app/controllers')
+  .into(app);
 
-// Exportar aplicativo configurado
+// Exportar aplicativo
 module.exports = app;
