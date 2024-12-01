@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "chat real time",
   "main": "index.js",
-  "scripts": {
-    "test": "dev"
-  },
+"scripts": {
+  "start": "node app.js",    
+  "dev": "nodemon app.js"    
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KarMiguel/Chat_real_time.git"

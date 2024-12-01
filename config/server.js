@@ -1,6 +1,7 @@
 const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
+const { body, validationResult } = require('express-validator');
 
 const app = express();
 
@@ -14,15 +15,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Carregar rotas, modelos e controladores
 consign()
-  .include('app/routes')
-  .then('app/models')
-  .then('app/controllers')
+  .include('./app/routes')
+  .then('./app/models')
+  .then('./app/controllers')
   .into(app);
 
-// Iniciar o servidor
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
+// Exportar aplicativo
 module.exports = app;
