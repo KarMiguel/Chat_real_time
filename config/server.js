@@ -1,23 +1,24 @@
 const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
-const path = require('path');
+const { body, validationResult } = require('express-validator');
 
 const app = express();
 
 // Configurações
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../app/views'));
+app.set('views', './app/views');
 
 // Middlewares
-app.use(express.static(path.join(__dirname, '../app/public')));
+app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Configurar e carregar rotas e controladores (sem 'models', já que a pasta não existe)
-consign({ cwd: path.join(__dirname, '../app') })
-  .include('routes')
-  .then('controllers')
+// Carregar rotas, modelos e controladores
+consign()
+  .include('./app/routes')
+  .then('./app/models')
+  .then('./app/controllers')
   .into(app);
 
-// Exporta o servidor configurado
+// Exportar aplicativo
 module.exports = app;
